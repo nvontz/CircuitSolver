@@ -1,0 +1,10 @@
+{
+	"Component":
+	{
+		"type": "resistor",
+		"value": "10o",
+		"nodeX": "A",
+		"nodeY": "B"
+	}
+}
+
