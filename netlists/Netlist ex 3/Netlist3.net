@@ -1,0 +1,22 @@
+* Netlist 2
+; go to LTSpice help under circuit elemtnts for a list of parts
+
+*Source
+I1 2 4 5; 5A current source
+E1 1 4 0 5 3; (3Va) Dependent source va at R6 with gain 3
+
+*Resistors 
+R1 1 2 20; 20 ohm Resistor
+R2 2 3 6; 6 ohm Resistor
+R3 3 5 11; 11 ohm Resistor
+R4 4 5 25; 25 ohm Resistor
+R5 4 0 5; 5 ohm Resistor
+R6 5 0 12; 12 ohm Resistor
+
+* Mesh Analysis
+; Mesh Current 1 given by I(R1)
+; Mesh Current 2 given by I(R2) and I(R3)
+; Mesh Current 3 given by I(R5) and I(R6)
+
+*Directives
+.op ; Dc operating point

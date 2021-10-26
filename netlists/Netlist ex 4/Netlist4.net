@@ -1,0 +1,21 @@
+* Netlist 2
+; go to LTSpice help under circuit elemtnts for a list of parts
+
+*Source
+V1 A 0 120; 120V voltage source
+F1 A V2 Vmtr 5; (5Ia) Current Dependent Source Ia at R2 with gain 5
+
+*Metering Ssource
+Vmtr 99 V1 0; metering for dependent source
+
+*Resistors
+R1 A V1 3k; 3k ohm Resistor
+R2 99 V2 1Meg; 1Meg ohm Resistor
+R3 V1 0 8k; 8k ohm Resistor
+R4 V2 0 5k; 5k ohm Resistor
+
+* Circuit Analysis
+; Current in Current Dependent Curent Source given by I(Vmtr)
+
+*Directives
+.op ; Dc operating point

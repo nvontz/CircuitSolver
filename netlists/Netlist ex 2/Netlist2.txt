@@ -1,0 +1,25 @@
+*Netlist 2
+
+*Source
+I1 0 99 15u;15uA current source; changed from (1)=>(99) for metering
+
+*Resistors
+R1 0 1 1Meg; 1M ohm Resistor; (1 0)=>(0 1) changed for mesh current //m or M is x10^-3, use Meg x10^6
+R2 1 0 4Meg; 4M ohm Resistor
+R3 99 2 200k; 200k ohm Resistor; changed from(1)=>(99) for metering
+R4 2 0 600k; 600k ohm Resistor
+
+* Metering Source
+Vmtr 1 99 0; Metering source to get mesh 2 current
+
+* Mesh Analysis
+; Mesh Current 1 given by I(R1)
+; Mesh Current 2 given by I(Vmtr)
+; Mesh Current 3 given by I(R3) and I(R4)
+
+*Directives
+.op ;Dc operating point
+
+
+*Truble shooting
+*how to get AI to add a voltage source for mesh 2
