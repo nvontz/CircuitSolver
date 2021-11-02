@@ -46,7 +46,10 @@ int main()
 	int sockfd, connfd, len;
 	struct sockaddr_in servaddr, cli;
 
-	// socket create and verification
+	// create socket
+	// AF_INET: address family, accepts IPv4
+	// SOCK_STREAM: TCP
+	// 0: default protocol, as SOCK_STREAM identifies TCP
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockfd == -1) {
 		printf("socket creation failed...\n");
@@ -54,6 +57,8 @@ int main()
 	}
 	else
 		printf("Socket successfully created..\n");
+
+	// set all memory to 0 to then add to it
 	bzero(&servaddr, sizeof(servaddr));
 
 	// assign IP, PORT
