@@ -15,6 +15,7 @@ public class MessageSender extends AsyncTask<String, Void, Void>
     protected Void doInBackground(String... voids)
     {
         String message = voids[0];
+        //System.out.println(message);
         try {
             s = new Socket("10.150.192.250", 8080);
             pw = new PrintWriter(s.getOutputStream());
