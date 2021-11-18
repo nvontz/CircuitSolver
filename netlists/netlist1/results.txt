@@ -1,0 +1,13 @@
+******
+** ngspice-31 : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Sun Oct 27 09:07:06 UTC 2019
+******
+
+Circuit: *netlist solution
+
+Error(parse.c--checkvalid): in2: no such vector.
+ngspice-31 done

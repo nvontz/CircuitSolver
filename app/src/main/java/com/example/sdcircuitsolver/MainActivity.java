@@ -4,21 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText e1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        e1 = (EditText) findViewById(R.id.editText);
 
     }
 
-    public void onButtonClick(View view)
+    public void send(View view)
     {
-        TextView txtWelcomeMsg = findViewById(R.id.welcomeMsg);
-        txtWelcomeMsg.setText("Will setup TCP connection and send message");
+        MessageSender messageSender = new MessageSender();
+        messageSender.execute(e1.getText().toString());
     }
 }
