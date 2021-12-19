@@ -1,6 +1,0 @@
-*Netlist solution
-V1 in gnd 10; 12Volt source
-R1 in in2 5;  5 Ohm Resistor
-R2 in2 gnd 20; 20 Ohm Resistor
-
-.op ; DC analysis

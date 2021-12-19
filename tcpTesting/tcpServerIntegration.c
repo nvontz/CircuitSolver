@@ -97,7 +97,7 @@ int main()
 	//if(fwrite(buffer, 1, sizeof(buffer), pNetlistFile) != sizeof(buffer)) //??
 		//die("Fwrite failed", -1);
 	
-	int charsWritten = fwrite(buffer, 1, strlen(buffer) - 2, pNetlistFile);
+	int charsWritten = fwrite(buffer, 1, strlen(buffer), pNetlistFile);
 	printf("Chars written: %d\n", charsWritten);
 #if 0
 	system("ngspice");
